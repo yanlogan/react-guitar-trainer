@@ -1,0 +1,62 @@
+$colorPrimary: #362c2f;
+$colorSecondary: #F0F0F0;
+$colorAccent: #f279b9;
+$colorAccentHover: #f69bcb;
+$colorError: #d32020;
+$btnColor: #1a1a1a;
+$btnColorLight: #f9f9f9;
+
+$hd4k: 3840px; // x 2160px
+$hd2k: 2560px; // x 1440px
+$tablet: 1280px;
+$mobile: 756px;
+
+%pseudo {
+  position: absolute;
+  display: block;
+  content: '';
+}
+
+%list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    display: block;
+  }
+}
+
+// MEDIA QUERIES
+
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin hd2k {
+  @media screen and (min-width: #{$hd2k}) {
+    @content;
+  }
+}
+
+@mixin hd4k {
+  @media screen and (min-width: #{$hd4k}) {
+    @content;
+  }
+}
+
+@mixin mobileLandscape {
+  @media screen and (max-height: 480px) and (orientation: landscape) {
+    @content;
+  }
+}

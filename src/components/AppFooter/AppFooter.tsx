@@ -1,4 +1,4 @@
-export const AppFooter = () => {
+const AppFooter = () => {
     const startDate = new Date(2025, 6, 1);
     const now = new Date();
     const daysGone = Math.ceil((now.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
@@ -9,3 +9,5 @@ export const AppFooter = () => {
         </footer>
     )
 }
+
+export default AppFooter;

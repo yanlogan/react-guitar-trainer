@@ -2,7 +2,7 @@ type AppHeaderProps = {
     username: string
 }
 
-export const AppHeader = ({username}: AppHeaderProps) => {
+const AppHeader = ({username}: AppHeaderProps) => {
     return (
         <header>
             <h1>— 🎸 Guitar Trainer —</h1>
@@ -10,3 +10,5 @@ export const AppHeader = ({username}: AppHeaderProps) => {
         </header>
     )
 }
+
+export default AppHeader;

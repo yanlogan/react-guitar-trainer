@@ -1,4 +1,4 @@
-import {PianoKey} from "../PianoKey/PianoKey.tsx";
+import PianoKey from "../PianoKey/PianoKey.tsx";
 
 type PianoOctaveProps = {
     pianoOctave: string
@@ -9,7 +9,7 @@ type OctaveNote = {
     color: 'white' | 'black'
 }
 
-export const PianoOctave = ({pianoOctave}: PianoOctaveProps) => {
+const PianoOctave = ({pianoOctave}: PianoOctaveProps) => {
     const octaveNotes: OctaveNote[] = [
         {
             pianoKey: "C",
@@ -61,10 +61,12 @@ export const PianoOctave = ({pianoOctave}: PianoOctaveProps) => {
     ];
 
     return (
-        <div className="piano-octave" data-piano-octave={pianoOctave}>
+        <div className="PianoOctave" data-piano-octave={pianoOctave}>
             {octaveNotes.map(({pianoKey, color}) => (
                 <PianoKey key={pianoKey} pianoKey={pianoKey} color={color}/>
             ))}
         </div>
     );
 }
+
+export default PianoOctave;

@@ -3,8 +3,10 @@ type PianoKeyProps = {
     color: 'white' | 'black'
 }
 
-export const PianoKey = ({pianoKey, color}: PianoKeyProps) => {
+const PianoKey = ({pianoKey, color}: PianoKeyProps) => {
     return (
-        <div className={`piano-key piano-key--${color}`} data-piano-key={pianoKey}>{pianoKey}</div>
+        <div className={`PianoKey PianoKey--${color}`} data-piano-key={pianoKey}>{pianoKey}</div>
     );
 }
+
+export default PianoKey;

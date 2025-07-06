@@ -1,9 +1,8 @@
-import './App.css'
-import {AppHeader} from "./components/AppHeader.tsx";
-import {AppFooter} from "./components/AppFooter.tsx";
-import {PianoKeyboard} from "./components/PianoKeyboard.tsx";
+import AppHeader from "./components/AppHeader/AppHeader.tsx";
+import AppFooter from "./components/AppFooter/AppFooter.tsx";
+import PianoKeyboard from "./components/PianoKeyboard/PianoKeyboard.tsx";
 
-function App() {
+const App = () => {
     const name = 'Янчес'
     return (
         <>

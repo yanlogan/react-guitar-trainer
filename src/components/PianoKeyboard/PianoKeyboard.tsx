@@ -1,8 +1,7 @@
-import {PianoOctave} from "../PianoOctave/PianoOctave.tsx";
-
-export const PianoKeyboard = () => {
+import PianoOctave from "../PianoOctave/PianoOctave.tsx";
+const PianoKeyboard = () => {
     return (
-        <div className="piano">
+        <div className="PianoKeyboard">
             <PianoOctave pianoOctave={"great"}/>
             <PianoOctave pianoOctave={"small"}/>
             <PianoOctave pianoOctave={"one-line"}/>
@@ -10,3 +9,5 @@ export const PianoKeyboard = () => {
         </div>
     );
 }
+
+export default PianoKeyboard;
