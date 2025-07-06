@@ -1,3 +1,5 @@
+import Container from "../../layout/Container/Container.tsx";
+
 type AppHeaderProps = {
     username: string
 }
@@ -5,8 +7,10 @@ type AppHeaderProps = {
 const AppHeader = ({username}: AppHeaderProps) => {
     return (
         <header>
-            <h1>— 🎸 Guitar Trainer —</h1>
-            <p>Привет, {username}!</p>
+            <Container>
+                <h1>— 🎸 Guitar Trainer —</h1>
+                <p>Привет, {username}!</p>
+            </Container>
         </header>
     )
 }
