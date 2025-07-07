@@ -1,3 +1,4 @@
+import "./PianoKeyboard.scss";
 import PianoOctave from "../PianoOctave/PianoOctave.tsx";
 const PianoKeyboard = () => {
     return (

@@ -1,0 +1,13 @@
+@use '../../styles/variables' as *;
+
+$pianoColorBorder: #1a1a1a;
+
+.PianoKeyboard {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border: 10px solid $pianoColorBorder;
+    border-radius: 10px;
+}

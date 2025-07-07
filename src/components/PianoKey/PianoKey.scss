@@ -1,0 +1,56 @@
+@use '../../styles/variables' as *;
+
+$keyColorWhite: #e3e3e3;
+$keyColorWhiteHover: #f0f0f0;
+$keyColorWhiteActive: #ffffff;
+$keyColorBlack: #1a1a1a;
+$keyColorBlackHover: #2a2a2a;
+$keyColorBlackActive: #3a3a3a;
+$keyColorBorder: #857c6e;
+
+.PianoKey {
+  display: flex;
+  font-size: 10px;
+  border: 1px solid $keyColorBorder;
+  border-radius: 4px;
+  background-color: $keyColorWhite;
+  cursor: pointer;
+  transition: all .05s ease-in-out;
+
+  &:hover {
+    background-color: $keyColorWhiteHover;
+  }
+
+  &:active {
+    background-color: $keyColorWhiteActive;
+  }
+
+  &--white {
+    align-items: end;
+    justify-content: center;
+    width: 40px;
+    height: 100%;
+    color: $colorPrimary;
+  }
+
+  &--black {
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 60%;
+    margin-right: -15px;
+    margin-left: -15px;
+    color: $colorSecondary;
+    border: 1px solid $keyColorBorder;
+    background-color: $keyColorBlack;
+    z-index: 2;
+
+    &:hover {
+      background-color: $keyColorBlackHover;
+    }
+
+    &:active {
+      background-color: $keyColorBlackActive;
+    }
+  }
+}

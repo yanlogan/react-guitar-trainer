@@ -1,5 +1,5 @@
 import type {ReactNode} from "react";
-import './Container.scss'
+import "./Container.scss";
 
 type ContainerProps = {
     children: ReactNode
