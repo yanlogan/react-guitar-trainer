@@ -1,6 +1,8 @@
+import type {KeyColor, KeyName} from "../../types/pianoKeys";
+
 type PianoKeyProps = {
-    pianoKey: string,
-    color: 'white' | 'black',
+    pianoKey: KeyName,
+    color: KeyColor,
     showLabel?: boolean
 }
 

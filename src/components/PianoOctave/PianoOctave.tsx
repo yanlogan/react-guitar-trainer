@@ -1,12 +1,9 @@
+
 import PianoKey from "../PianoKey/PianoKey.tsx";
+import type {OctaveNote} from "../../types/pianoKeys";
 
 type PianoOctaveProps = {
     pianoOctave: string
-}
-
-type OctaveNote = {
-    pianoKey: string
-    color: 'white' | 'black'
 }
 
 const PianoOctave = ({pianoOctave}: PianoOctaveProps) => {
@@ -17,7 +14,8 @@ const PianoOctave = ({pianoOctave}: PianoOctaveProps) => {
         },
         {
             pianoKey: "CisDes",
-            color: "black"} ,
+            color: "black"
+        },
         {
             pianoKey: "D",
             color: "white"
