@@ -63,7 +63,7 @@ const PianoOctave = ({pianoOctave}: PianoOctaveProps) => {
     return (
         <div className="PianoOctave" data-piano-octave={pianoOctave}>
             {octaveNotes.map(({pianoKey, color}) => (
-                <PianoKey key={pianoKey} pianoKey={pianoKey} color={color}/>
+                <PianoKey key={pianoKey} pianoKey={pianoKey} color={color} showLabel={true}/>
             ))}
         </div>
     );

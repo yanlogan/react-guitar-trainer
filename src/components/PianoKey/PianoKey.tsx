@@ -1,11 +1,12 @@
 type PianoKeyProps = {
     pianoKey: string,
-    color: 'white' | 'black'
+    color: 'white' | 'black',
+    showLabel?: boolean
 }
 
-const PianoKey = ({pianoKey, color}: PianoKeyProps) => {
+const PianoKey = ({pianoKey, color, showLabel = false}: PianoKeyProps) => {
     return (
-        <div className={`PianoKey PianoKey--${color}`} data-piano-key={pianoKey}>{pianoKey}</div>
+        <div className={`PianoKey PianoKey--${color}`} data-piano-key={pianoKey}>{showLabel ? pianoKey : null}</div>
     );
 }
 
