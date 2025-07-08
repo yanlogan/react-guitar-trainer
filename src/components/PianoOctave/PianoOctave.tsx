@@ -1,8 +1,8 @@
 import "./PianoOctave.scss";
 import PianoKey from "../PianoKey/PianoKey.tsx";
-import type {OctaveNote} from "../../types/pianoKeys";
+import type {OctaveNote} from "../../types/pianoKeys.ts";
 
-type PianoOctaveProps = {
+interface PianoOctaveProps {
     pianoOctave: string
 }
 

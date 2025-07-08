@@ -1,7 +1,7 @@
 import "./PianoKey.scss";
 import type {KeyColor, KeyLabel, KeyName} from "../../types/pianoKeys";
 
-type PianoKeyProps = {
+interface PianoKeyProps {
     pianoKey: KeyName,
     pianoKeyLabel: KeyLabel,
     color: KeyColor,
