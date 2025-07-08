@@ -10,7 +10,11 @@ interface PianoKeyProps {
 
 const PianoKey = ({pianoKey, pianoKeyLabel, color, showLabel = false}: PianoKeyProps) => {
     return (
-        <div className={`PianoKey PianoKey--${color}`} data-piano-key={pianoKey}>{showLabel ? pianoKeyLabel : null}</div>
+        <div className={`PianoKey PianoKey--${color}`} data-piano-key={pianoKey}>
+            {showLabel ? (
+                <span className="PianoKey__label">{pianoKeyLabel}</span>
+            ) : null}
+        </div>
     );
 }
 
