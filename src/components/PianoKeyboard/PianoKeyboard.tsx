@@ -1,12 +1,16 @@
 import "./PianoKeyboard.scss";
 import PianoOctave from "../PianoOctave/PianoOctave.tsx";
-const PianoKeyboard = () => {
+
+interface PianoKeyboardProps {
+    showLabels?: boolean
+}
+const PianoKeyboard = ({showLabels = false}: PianoKeyboardProps) => {
     return (
         <div className="PianoKeyboard">
-            <PianoOctave pianoOctave={"great"}/>
-            <PianoOctave pianoOctave={"small"}/>
-            <PianoOctave pianoOctave={"one-line"}/>
-            <PianoOctave pianoOctave={"two-line"}/>
+            <PianoOctave pianoOctave={"great"} showLabels={showLabels}/>
+            <PianoOctave pianoOctave={"small"} showLabels={showLabels}/>
+            <PianoOctave pianoOctave={"one-line"} showLabels={showLabels}/>
+            <PianoOctave pianoOctave={"two-line"} showLabels={showLabels}/>
         </div>
     );
 }
