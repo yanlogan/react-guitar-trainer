@@ -80,14 +80,15 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: $btnColor;
-  transition: border-color 0.25s;
+  transition: background-color 0.25s;
 
   &:hover {
-    border-color: $colorAccentHover;
+    background-color: $btnColorHover;
   }
   &:focus,
   &:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+    outline: none;
+    //outline: 4px auto -webkit-focus-ring-color;
   }
 
   @media (prefers-color-scheme: light) {
