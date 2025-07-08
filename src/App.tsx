@@ -2,9 +2,21 @@ import AppHeader from "./components/AppHeader/AppHeader.tsx";
 import AppFooter from "./components/AppFooter/AppFooter.tsx";
 import PianoKeyboard from "./components/PianoKeyboard/PianoKeyboard.tsx";
 import Container from "./layout/Container/Container.tsx";
+import Button from "./components/Button/Button.tsx";
+import {useState} from "react";
 
 const App = () => {
     const name = 'Янчес'
+    const [showLabels   , setShowLabels   ] = useState(false);
+
+    const toggleShowLabels = () => {
+        if (showLabels) {
+            setShowLabels(false)
+        } else {
+            setShowLabels(true)
+        }
+    }
+
     return (
         <>
             <AppHeader username={name}/>
@@ -15,8 +27,14 @@ const App = () => {
                     {/*    <button className="btn btn-primary">Тренировка</button>*/}
                     {/*    <button className="btn btn-accent">Тест</button>*/}
                     {/*</div>*/}
-                    <h2>Клавиши фортепиано</h2>
-                    <PianoKeyboard/>
+                    <section className={"piano"}>
+                        <h2>Клавиши фортепиано</h2>
+                        <div className={"piano-controls"}>
+                            {/*TODO: сделать это тогглером*/}
+                            <Button title={"Показать обозначения нот"} handleClick={toggleShowLabels}/>
+                        </div>
+                        <PianoKeyboard showLabels={showLabels}/>
+                    </section>
                     {/*<h2>Гитарный гриф</h2>*/}
                 </Container>
             </main>
