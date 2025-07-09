@@ -7,13 +7,22 @@ import {useState} from "react";
 
 const App = () => {
     const name = 'Янчес'
-    const [showPianoKeyLabels   , setShowPianoKeyLabels   ] = useState(false);
+    const [showPianoKeyLabels, setShowPianoKeyLabels] = useState(false);
+    const [showOctaveLabels, setShowOctaveLabels] = useState(false);
 
     const toggleShowPianoKeyLabels = () => {
         if (showPianoKeyLabels) {
             setShowPianoKeyLabels(false)
         } else {
             setShowPianoKeyLabels(true)
+        }
+    }
+
+    const toggleShowOctaveLabels = () => {
+        if (showOctaveLabels) {
+            setShowOctaveLabels(false)
+        } else {
+            setShowOctaveLabels(true)
         }
     }
 
@@ -32,8 +41,9 @@ const App = () => {
                         <div className={"piano-controls"}>
                             {/*TODO: сделать это тогглером*/}
                             <Button title={"Показать обозначения нот"} handleClick={toggleShowPianoKeyLabels}/>
+                            <Button title={"Показать названия октав"} handleClick={toggleShowOctaveLabels}/>
                         </div>
-                        <PianoKeyboard showPianoKeyLabels={showPianoKeyLabels}/>
+                        <PianoKeyboard showPianoKeyLabels={showPianoKeyLabels} showOctaveLabels={showOctaveLabels}/>
                     </section>
                     {/*<h2>Гитарный гриф</h2>*/}
                 </Container>
