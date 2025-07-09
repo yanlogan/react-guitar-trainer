@@ -5,10 +5,10 @@ import type {OctaveLabel, OctaveName, OctaveNote} from "../../types/pianoKeys.ts
 interface PianoOctaveProps {
     name: OctaveName,
     label: OctaveLabel,
-    showLabels?: boolean
+    showPianoKeyLabels?: boolean
 }
 
-const PianoOctave = ({name, label, showLabels = false}: PianoOctaveProps) => {
+const PianoOctave = ({name, label, showPianoKeyLabels = false}: PianoOctaveProps) => {
     const octaveNotes: OctaveNote[] = [
         {
             pianoKey: "C",
@@ -77,7 +77,7 @@ const PianoOctave = ({name, label, showLabels = false}: PianoOctaveProps) => {
             <div className="PianoOctave__label">{label}</div>
             <div className="PianoOctave__wrapper">
                 {octaveNotes.map(({pianoKey, pianoKeyLabel, color}) => (
-                    <PianoKey key={pianoKey} pianoKey={pianoKey} pianoKeyLabel={pianoKeyLabel} color={color} showLabel={showLabels}/>
+                    <PianoKey key={pianoKey} pianoKey={pianoKey} pianoKeyLabel={pianoKeyLabel} color={color} showLabel={showPianoKeyLabels}/>
                 ))}
             </div>
         </div>

@@ -7,13 +7,13 @@ import {useState} from "react";
 
 const App = () => {
     const name = 'Янчес'
-    const [showLabels   , setShowLabels   ] = useState(false);
+    const [showPianoKeyLabels   , setShowPianoKeyLabels   ] = useState(false);
 
-    const toggleShowLabels = () => {
-        if (showLabels) {
-            setShowLabels(false)
+    const toggleShowPianoKeyLabels = () => {
+        if (showPianoKeyLabels) {
+            setShowPianoKeyLabels(false)
         } else {
-            setShowLabels(true)
+            setShowPianoKeyLabels(true)
         }
     }
 
@@ -31,9 +31,9 @@ const App = () => {
                         <h2>Клавиши фортепиано</h2>
                         <div className={"piano-controls"}>
                             {/*TODO: сделать это тогглером*/}
-                            <Button title={"Показать обозначения нот"} handleClick={toggleShowLabels}/>
+                            <Button title={"Показать обозначения нот"} handleClick={toggleShowPianoKeyLabels}/>
                         </div>
-                        <PianoKeyboard showLabels={showLabels}/>
+                        <PianoKeyboard showPianoKeyLabels={showPianoKeyLabels}/>
                     </section>
                     {/*<h2>Гитарный гриф</h2>*/}
                 </Container>

@@ -3,10 +3,10 @@ import PianoOctave from "../PianoOctave/PianoOctave.tsx";
 import type {Octave} from "../../types/pianoKeys.ts";
 
 interface PianoKeyboardProps {
-    showLabels?: boolean
+    showPianoKeyLabels?: boolean
 }
 
-const PianoKeyboard = ({showLabels = false}: PianoKeyboardProps) => {
+const PianoKeyboard = ({showPianoKeyLabels = false}: PianoKeyboardProps) => {
     const octaves: Octave[] = [
         {octaveName: "great", octaveLabel: "Большая"},
         {octaveName: "small", octaveLabel: "Малая"},
@@ -17,7 +17,7 @@ const PianoKeyboard = ({showLabels = false}: PianoKeyboardProps) => {
     return (
         <div className="PianoKeyboard">
             {octaves.map(({octaveName, octaveLabel}  ) => (
-                <PianoOctave name={octaveName} label={octaveLabel} showLabels={showLabels}/>
+                <PianoOctave name={octaveName} label={octaveLabel} showPianoKeyLabels={showPianoKeyLabels}/>
             ))}
         </div>
     );
