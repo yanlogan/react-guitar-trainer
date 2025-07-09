@@ -8,6 +8,7 @@ $pianoColorBorder: #1a1a1a;
     justify-content: center;
     align-items: center;
     width: auto;
-    border: 10px solid $pianoColorBorder;
-    border-radius: 10px;
+    margin-top: $keyboardMargin;
+    border: $keyboardBorderWidth solid $pianoColorBorder;
+    border-radius: $keyboardBorderWidth;
 }

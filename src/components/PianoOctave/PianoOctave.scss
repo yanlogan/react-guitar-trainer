@@ -2,6 +2,37 @@
 
 .PianoOctave {
     position: relative;
+}
+
+.PianoOctave__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(calc(-50% - $keyboardBorderWidth - ($keyboardMargin / 2)));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: $colorSecondary;
+}
+
+.PianoOctave__label::before,
+.PianoOctave:last-child .PianoOctave__label::after {
+    @extend %pseudo;
+    width: 1px;
+    height: 70%;
+    background-color: $colorSecondary;
+}
+
+.PianoOctave__label::before {
+    left: 0;
+}
+
+.PianoOctave:last-child .PianoOctave__label::after {
+    right: 0;
+}
+
+.PianoOctave__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
