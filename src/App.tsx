@@ -11,19 +11,11 @@ const App = () => {
     const [showOctaveLabels, setShowOctaveLabels] = useState(false);
 
     const toggleShowPianoKeyLabels = () => {
-        if (showPianoKeyLabels) {
-            setShowPianoKeyLabels(false)
-        } else {
-            setShowPianoKeyLabels(true)
-        }
+        setShowPianoKeyLabels(!showPianoKeyLabels);
     }
 
     const toggleShowOctaveLabels = () => {
-        if (showOctaveLabels) {
-            setShowOctaveLabels(false)
-        } else {
-            setShowOctaveLabels(true)
-        }
+        setShowOctaveLabels(!showOctaveLabels);
     }
 
     return (
