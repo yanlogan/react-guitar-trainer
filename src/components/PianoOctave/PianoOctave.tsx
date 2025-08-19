@@ -78,7 +78,7 @@ const PianoOctave = ({name, label, showPianoKeyLabels = false, showLabel = false
             {showLabel && <div className="PianoOctave__label">{label}</div>}
             <div className="PianoOctave__wrapper">
                 {octaveNotes.map(({pianoKey, pianoKeyLabel, color}) => (
-                    <PianoKey key={pianoKey} pianoKey={pianoKey} pianoKeyLabel={pianoKeyLabel} color={color} showLabel={showPianoKeyLabels}/>
+                    <PianoKey key={pianoKey} pianoKey={pianoKey} octaveName={name} pianoKeyLabel={pianoKeyLabel} color={color} showLabel={showPianoKeyLabels}/>
                 ))}
             </div>
         </div>

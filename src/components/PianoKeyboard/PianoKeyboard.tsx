@@ -9,10 +9,10 @@ interface PianoKeyboardProps {
 
 const PianoKeyboard = ({showPianoKeyLabels = false, showOctaveLabels = false}: PianoKeyboardProps) => {
     const octaves: Octave[] = [
-        {octaveName: "great", octaveLabel: "Большая"},
-        {octaveName: "small", octaveLabel: "Малая"},
-        {octaveName: "one-line", octaveLabel: "Первая"},
-        {octaveName: "two-line", octaveLabel: "Вторая"}
+        {octaveName: "G", octaveLabel: "Большая"},
+        {octaveName: "S", octaveLabel: "Малая"},
+        {octaveName: "1L", octaveLabel: "Первая"},
+        {octaveName: "2L", octaveLabel: "Вторая"}
     ];
 
     return (
