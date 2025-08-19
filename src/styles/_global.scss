@@ -80,10 +80,11 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: $btnColor;
-  transition: background-color 0.25s;
+  transition: all 0.25s;
 
   &:hover {
     background-color: $btnColorHover;
+    color: $btnColorLight;
   }
   &:focus,
   &:focus-visible {

@@ -19,6 +19,7 @@ $keyColorBorder: #857c6e;
 
   &:hover {
     background-color: $keyColorWhiteHover;
+    color: $colorPrimary;
   }
 
   &:active {
