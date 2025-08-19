@@ -11,4 +11,5 @@ $pianoColorBorder: #1a1a1a;
     margin-top: $keyboardMargin;
     border: $keyboardBorderWidth solid $pianoColorBorder;
     border-radius: $keyboardBorderWidth;
+    user-select: none;
 }
