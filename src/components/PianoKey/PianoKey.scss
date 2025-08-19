@@ -17,7 +17,7 @@ $keyColorBorder: #857c6e;
   cursor: pointer;
   transition: all .05s ease-in-out;
 
-  &:hover {
+  &:hover:not(.PianoKey--active) {
     background-color: $keyColorWhiteHover;
     color: $colorPrimary;
   }
@@ -46,12 +46,20 @@ $keyColorBorder: #857c6e;
     background-color: $keyColorBlack;
     z-index: 2;
 
-    &:hover {
+    &:hover:not(.PianoKey--active) {
       background-color: $keyColorBlackHover;
     }
 
     &:active {
       background-color: $keyColorBlackActive;
     }
+  }
+}
+
+.PianoKey--active {
+  background-color: $keyColorWhiteActive;
+
+  &.PianoKey--black {
+    background-color: $keyColorBlackActive;
   }
 }
