@@ -1,0 +1,2 @@
+export const PROJECT_START_DATE_UTC = Date.UTC(2025, 6, 1);
+export const PROJECT_START_DATE = new Date(PROJECT_START_DATE_UTC);
