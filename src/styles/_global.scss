@@ -79,7 +79,8 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: $btnColor;
+  color: $btnColor;
+  background-color: $btnColorLight;
   transition: all 0.25s;
 
   &:hover {
@@ -93,7 +94,8 @@ button {
   }
 
   @media (prefers-color-scheme: light) {
-    background-color: $btnColorLight;
+    color: $btnColorLight;
+    background-color: $btnColor;
   }
 }
 

@@ -14,6 +14,10 @@
     align-items: center;
     width: 100%;
     color: $colorSecondary;
+
+    @media (prefers-color-scheme: light) {
+        color: $colorPrimary;
+    }
 }
 
 .PianoOctave__label::before,
@@ -22,6 +26,10 @@
     width: 1px;
     height: 70%;
     background-color: $colorSecondary;
+
+    @media (prefers-color-scheme: light) {
+        background-color: $colorPrimary;
+    }
 }
 
 .PianoOctave__label::before {
