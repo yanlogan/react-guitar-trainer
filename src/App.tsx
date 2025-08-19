@@ -9,11 +9,9 @@ const App = () => {
     const name = 'Янчес'
     const [showPianoKeyLabels, setShowPianoKeyLabels] = useState(false);
     const [showOctaveLabels, setShowOctaveLabels] = useState(false);
-
     const toggleShowPianoKeyLabels = () => {
         setShowPianoKeyLabels(!showPianoKeyLabels);
     }
-
     const toggleShowOctaveLabels = () => {
         setShowOctaveLabels(!showOctaveLabels);
     }
@@ -31,7 +29,6 @@ const App = () => {
                     <section className={"piano"}>
                         <h2>Клавиши фортепиано</h2>
                         <div className={"piano-controls"}>
-                            {/*TODO: сделать это тогглером или добавить активный класс на кнопку*/}
                             <Button title={"Показать обозначения нот"} handleClick={toggleShowPianoKeyLabels}/>
                             <Button title={"Показать названия октав"} handleClick={toggleShowOctaveLabels}/>
                         </div>

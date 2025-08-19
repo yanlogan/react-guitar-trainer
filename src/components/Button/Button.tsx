@@ -1,4 +1,5 @@
 import "./Button.scss";
+import {useState} from "react";
 
 interface ButtonProps {
     title: string,
@@ -6,7 +7,9 @@ interface ButtonProps {
 }
 
 const Button = ({title, handleClick}: ButtonProps) => {
-    return <button className="Button" type="button" onClick={handleClick}>{title}</button>;
+    const [active, setActive] = useState(false);
+
+    return <button className={`Button${active ? ' Button--active' : ''}`} type="button" onClick={() => {setActive(!active); handleClick();}}>{title}</button>;
 };
 
 export default Button;
